@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Video Popup</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--AniJS-->
+    <link rel="stylesheet" href="style.css">
+<style>
+body {
+  background-image: url('barbie.jpg');
+}
+</style>
+</head>
+<body> 
+<p style="background-image:'barbie';">
+<body style="background-color:aquamarine;">
+         <div class="map">
+      <a href="https://goo.gl/maps/WpBhLr7TpLhvxekR8" target="_blank"><i class="fa-solid fa-location-dot"></i></a>
+      <p>Ubicación</p>        
+      </div>   
+        <div class="btn">
+      <div class="play"></div>
+            <p>Invitacion</p>
+        </div>   
+
+        <div class="clip">
+            <video src="./video.mp4"></video>
+            <b class="close">Menu Principal</b>
+        </div>
+
+        <script>
+            
+            let btn = document.querySelector('.btn');
+            let clip = document.querySelector('.clip')
+            let close = document.querySelector('.close')
+            let video = document.querySelector('video')
+            btn.onclick = function(){
+                btn.classList.add('active')
+                clip.classList.add('active')
+                video.play()
+                video.currentTime = 0;
+            } 
+
+            close.onclick = function(){
+                btn.classList.remove('active');
+                clip.classList.remove('active');
+                video.pause()
+            } 
+
+      </script>
+</body>
+</html>

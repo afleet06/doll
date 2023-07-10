@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;700;800;900&display=swap');
+
+
+*
+
+{
+    margin: 30;
+    padding:30;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body
+
+{
+    color: #FF0000;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ flex-direction: column;
+    min-height: 80vh;
+}
+
+ .map a {
+  color: #FF0000;
+  font-size: 2rem;
+  text-shadow: 0 0 5px  color: #FF0000;
+ width: 50px;
+    height: 50px;
+    background: #FF0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px #FF0000;
+}
+.map
+
+{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.btn
+
+{
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    gap: 15px;
+}
+
+.btn .play
+
+{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: #FF0000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 15px 25px #FF0000;
+    transition: 0.5s;
+}
+
+
+.btn.active .play 
+
+{
+    box-shadow: 0 0 0 150vh #FF0000;
+}
+
+
+.btn .play::before
+
+{
+    content: '';
+    position: absolute;
+    border: 25px solid  color: #FF0000;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 0px solid transparent;
+    transform: translateX(5px);
+}
+
+
+.map p
+
+{
+    font-weight: 500;
+    font-size: 1em;
+    color: color: #FF0000;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+.btn p
+
+{
+    font-weight: 500;
+    font-size: 1em;
+    color: color: #FF0000;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.clip
+
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) scale(0);
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: 0.5s;
+}
+
+.clip.active 
+
+{
+    transition-delay:0.5s;
+    transform: translate(-50%,-50%) scale(.80);
+ color: #FF0000;
+}
+
+
+
+
+.clip video
+
+{
+    max-width: 900px;
+    outline: none;
+    border: 10px solid #FF0000;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
+
+.clip .close 
+
+{
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    cursor: pointer;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FF0000;
+   
+}
+
+
+
+
+/* responsive code  */
+
+@media (max-width: 991px) 
+{
+    .clip video
+
+{
+    max-width: 90%;
+}
+}
