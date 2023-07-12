@@ -15,8 +15,9 @@ body
 
 {
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: top;
+    align-items:center;
     min-height: 100vh;
 }
 
@@ -88,9 +89,10 @@ body
     transform: translate(-50%,-50%) scale(0);
     width: 90%;
     height: 90%;
-    display:flex;
-    justify-content:top;
-    align-items: top;
+     display: flex;
+    flex-direction: column;
+ justify-content: center;
+    align-items:center;
     z-index: 1000;
     transition: 0.5s;
 }
@@ -118,7 +120,7 @@ body
 
 {
     position:absolute ;
-    top:0px;
+    top:-20px;
     right: 13px;
     cursor: pointer;
     font-weight: 500;
